@@ -1,0 +1,118 @@
+:root {
+  --ink: #14301f;
+  --body: #2c3330;
+  --muted: #6b7069;
+  --gold: #9a7434;
+  --ground: #f7f5f0;
+  --card: #ffffff;
+  --rule: #e2ddd2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8ede8;
+    --body: #c9d0ca;
+    --muted: #9aa39c;
+    --gold: #c9a45f;
+    --ground: #141815;
+    --card: #1c211d;
+    --rule: #2d332e;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--body);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  color: var(--ink);
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.tagline {
+  color: var(--muted);
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+h2 {
+  color: var(--ink);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  margin: 2.75rem 0 0.75rem;
+}
+
+h3 {
+  color: var(--ink);
+  font-size: 1.02rem;
+  margin: 1.75rem 0 0.4rem;
+}
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--gold); text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+
+ul { padding-left: 1.2rem; margin: 0 0 1rem; }
+li { margin-bottom: 0.45rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+
+.action {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--ground);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  margin-top: 0.35rem;
+}
+
+.action:hover { color: var(--ground); opacity: 0.88; }
+
+.stamp {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 0 2rem;
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+footer a { color: var(--muted); }
+footer a:hover { color: var(--ink); }
